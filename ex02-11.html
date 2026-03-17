@@ -15,6 +15,25 @@
         width: 100px;
         height: 70px;
       }
+      #row-line,
+      #col-line {
+        background-color: darkturquoise;
+      }
+      .lines1 {
+        background-color: darkseagreen;
+      }
+      .bottom-lines {
+        color: rgb(90, 90, 255);
+      }
+      .top-lines {
+        color: red;
+      }
+      .bottom-back {
+        background-color: rgb(250, 250, 80);
+      }
+      .lines4 {
+        color: greenyellow;
+      }
     </style>
   </head>
   <body>
@@ -35,25 +54,23 @@
         <th>Line 5</th>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="lines1">1행 1열</td>
+        <td class="top-lines">1행 2열</td>
+        <td class="top-lines">1행 3열</td>
+        <td class="top-lines lines4">1행 4열</td>
+        <td rowspan="2" id="row-line">1행 5열</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="lines1">2행 1열</td>
+        <td colspan="2" id="col-line">2행 2열</td>
+        <td class="lines4">2행 3열</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="lines1 bottom-lines">3행 1열</td>
+        <td class="bottom-lines">3행 2열</td>
+        <td class="bottom-lines bottom-back">3행 3열</td>
+        <td class="bottom-lines bottom-back lines4">3행 4열</td>
+        <td class="bottom-lines bottom-back">3행 5열</td>
       </tr>
     </table>
   </body>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 100%;
+        height: 80vh;
+      }
+      td {
+        border: 1px solid #ccc;
+      }
+      .header,
+      .footer {
+        height: 15%;
+        background-color: cadetblue;
+      }
+      .footer {
+        height: 10%;
+      }
+      .nav {
+        height: 5%;
+      }
+      .content {
+        height: 70%;
+      }
+      .center {
+        width: 60%;
+        background-color: antiquewhite;
+      }
+      #title {
+        font-size: 3rem;
+        text-align: center;
+      }
+      .nav {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>테이블 응용</h1>
+    <hr />
+    <a href="index.html">홈으로</a><br /><br />
+    <!-- table>(tr>td*3)*3 -->
+    <table>
+      <tr class="header">
+        <td colspan="3" id="title">NEVER</td>
+      </tr>
+      <tr class="nav">
+        <td colspan="3">
+          메일 | 카페 | 블로그 | 스토어 | 뉴스 | 증권 | 부동산 | 지도 | 웹툰 |
+          치지직
+        </td>
+      </tr>
+      <tr class="content">
+        <td><img src="./aside.png" alt="" /></td>
+        <td class="center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam,
+          laborum incidunt iste pariatur amet nesciunt expedita adipisci, saepe
+          quas asperiores voluptates corrupti necessitatibus harum eius numquam
+          earum enim vel cumque minima. Consequuntur ullam perferendis culpa
+          itaque, omnis corporis deserunt saepe nobis vel inventore, odio velit
+          commodi quia illum accusamus ipsam eos. Quibusdam officiis architecto
+          dicta? Dolore esse accusamus reiciendis repellendus asperiores porro
+          veniam nemo odio voluptate placeat, ipsum odit similique culpa ducimus
+          vitae. Perspiciatis mollitia exercitationem iusto illum autem
+          voluptatibus fugit corporis nulla, iste magni architecto non, quae,
+          culpa sunt. Possimus vel at aperiam eaque laboriosam inventore ipsam
+          necessitatibus!
+        </td>
+        <td><img src="./aside.png" alt="" /></td>
+      </tr>
+      <tr class="footer">
+        <td colspan="3"></td>
+      </tr>
+    </table>
+  </body>
+</html>
