@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미니멀페이지</title>
+    <!-- <link rel="stylesheet" href="myreset.css" /> -->
+    <style>
+      body {
+        background-color: rgb(145, 211, 216);
+        background: url(data:image/jpeg;base64,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)
+          no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        color: rgb(58, 97, 67);
+      }
+      span > a {
+        text-decoration: none;
+        color: rgb(228, 95, 95);
+      }
+      a:active {
+        color: red;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(112, 112, 211);
+        border-radius: 20px 40px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">홈으로</a><br />
+    <h1>Emotion</h1>
+    <span><a href="#">SAD</a></span>
+    <span><a href="#">ANGRY</a></span>
+    <span><a href="#">HAPPY</a></span>
+    <span><a href="#">LOVE</a></span>
+    <div></div>
+  </body>
+</html>
+
+<!-- 4가지: 위부터 시계방향 (위, 오른, 아래, 왼)
+     2가지: 위 + 아래, 좌 + 우
+     1가지: 전부
+     margin: 10px
+     margin: 20px 40px
+     margin: 20px 20px 20px 20px
+     
+     margin-top: 위 한곳
+     margin-bottom: 아래 한 곳
+     --------------
+     대각선
+     4가지: 위부터 시계방향(왼위, 오른위, 오른아래, 왼아래)
+     2가지: 왼위 + 대각선, 오른위 + 대각선
+     1가지: 전부
+     border-radius: 10px 10px 20px 20px-->
