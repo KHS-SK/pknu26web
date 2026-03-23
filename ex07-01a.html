@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 쇼핑몰</title>
+    <style>
+      h1 {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(82, 116, 15);
+        color: white;
+        position: fixed;
+        top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 20px;
+      }
+
+      /* h2 {
+        color: #777;
+        text-align: center;
+      } */
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 60px;
+      }
+      li {
+        width: 300px;
+        height: 200px;
+        padding: 15px;
+        border: 1px solid #aaa;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: rgb(252, 249, 244);
+        /* overflow: hidden; */
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .caption {
+        background-color: rgba(0, 0, 0, 0.507);
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        /* width: 300px; */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: all 0.5s ease;
+        opacity: 0;
+      }
+      li:hover .caption {
+        transform: translateY(-205px);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <a href="index.html">홈으로</a><br />
+    <!-- div.box>h1{신상품 목록}+ul>(li>img+div.caption>h2{상품$}+p{상품$ 설명텍스트}+p{가격: 1$,12$원})*9 -->
+    <div class="box">
+      <h1>신상품 목록</h1>
+      <ul>
+        <li>
+          <img
+            src="https://cdn.newspenguin.com/news/photo/202505/19656_56545_51.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품1</h2>
+            <p>상품1 설명텍스트</p>
+            <p>가격: 11,121원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://thumb.mt.co.kr/cdn-cgi/image/f=avif/21/2018/03/2018031910133478048_1.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품2</h2>
+            <p>상품2 설명텍스트</p>
+            <p>가격: 12,122원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://cdn.greenpostkorea.co.kr/news/photo/202205/200825_201400_4454.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품3</h2>
+            <p>상품3 설명텍스트</p>
+            <p>가격: 13,123원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://cdn.esgeconomy.com/news/photo/202102/171_183_451.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품4</h2>
+            <p>상품4 설명텍스트</p>
+            <p>가격: 14,124원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://thevou.com/wp-content/uploads/2023/10/What-is-Garment-696x1044.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품5</h2>
+            <p>상품5 설명텍스트</p>
+            <p>가격: 15,125원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://cdn.ftoday.co.kr/news/photo/201609/55896_59936_2240.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품6</h2>
+            <p>상품6 설명텍스트</p>
+            <p>가격: 16,126원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://cdn.aitimes.com/news/photo/201904/47267_1364_1732.jpg
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품7</h2>
+            <p>상품7 설명텍스트</p>
+            <p>가격: 17,127원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://steadyeverywear.com/web/product/big/202503/c7aad7dec232f96ee575a10ebe478415.png
+"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품8</h2>
+            <p>상품8 설명텍스트</p>
+            <p>가격: 18,128원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://steadyeverywear.com/web/product/big/202503/bdd67360bd3f406a6e02ee74b3d6054c.png"
+            alt=""
+          />
+          <div class="caption">
+            <h2>상품9</h2>
+            <p>상품9 설명텍스트</p>
+            <p>가격: 19,129원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

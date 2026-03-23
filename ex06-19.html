@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로필</title>
+    <style>
+      .box {
+        background-color: rgb(248, 222, 248);
+        height: 100vh;
+        /* padding-top: 8rem; */
+        /* box-sizing: border-box; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background-color: white;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        overflow: hidden;
+        height: 60%;
+      }
+      .banner {
+        background-image: url(https://assets.ppy.sh/user-profile-covers/3216107/1c7062267e361442f8a0e908416c1e974a7290decc84ca7a97be94fa1ac58fd2.png);
+        background-size: cover;
+        display: flex;
+        height: 140px;
+        justify-content: center;
+      }
+      .profile {
+        background-image: url(./data/slowpoke.png);
+        background-size: 150px;
+        background-position: -10px -10px;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.7);
+        transform: translateY(40%);
+        transition: transform 2s ease;
+      }
+      .profile:hover {
+        transform: translateY(60%) scale(1.1);
+      }
+      .name {
+        text-align: center;
+        padding-top: 70px;
+      }
+      .follow-btn {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      button {
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: pink;
+        border: none;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>프로필</h1>
+    <hr />
+    <a href="index.html">홈으로</a><br />
+    <!-- div.box>div.card>div.banner>div.profile^h2.name{Hosung}+div.follow-btn{Follow}+div.desc{내용들...} -->
+    <div class="box">
+      <div class="card">
+        <div class="banner">
+          <div class="profile"></div>
+        </div>
+        <h2 class="name">Hosung</h2>
+        <div class="follow-btn"><button>Follow</button></div>
+        <div class="desc">
+          열심히 수업받는 여러분 정말 고생이 많습니다.<br />
+          항상 노력하여 최고의 프로그래머가 되도록 합시다.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공튀기기 과제 제출</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: cornflowerblue;
+        animation: mymove 4s linear infinite;
+      }
+      @keyframes mymove {
+        0% {
+          transform: translate(0);
+        }
+        49% {
+          transform: translate(0, 500px);
+        }
+        50% {
+          transform: translate(0, 500px) scaleY(0.7) scaleX(1.2);
+        }
+        51% {
+          transform: translate(0, 500px);
+        }
+
+        99% {
+          transform: translate(0);
+        }
+        100% {
+          transform: translate(0) scaleY(0.7) scaleX(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>공튀기기</h1>
+    <hr />
+    <a href="index.html">홈으로</a><br />
+    <div></div>
+  </body>
+</html>
