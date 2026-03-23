@@ -1,49 +1,199 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML 실습</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f9ff, #cbebff);
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: white;
+        background: linear-gradient(90deg, cadetblue, teal);
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      .day {
+        flex: 1 1 300px; /* 최소 300px, 화면 크기에 따라 자동 확장 */
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .day h2 {
+        color: teal;
+        margin-bottom: 10px;
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+      }
+      .examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .examples a {
+        flex: 1 1 80px;
+        padding: 8px;
+        background-color: #e0f7fa;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+      }
+      .examples a:hover {
+        background-color: #b2ebf2;
+        transform: translateY(-2px);
+      }
+    </style>
   </head>
   <body>
-    <h1 style="color: aliceblue; background-color: cadetblue; padding: 10px">
-      HTML 실습
-    </h1>
-    <hr />
-    <h2>1일차</h2>
-    <!-- (a[href="ex01-0$.html"]{예제$}br)*7 -->
-    <a href="ex01-01.html">예제1</a><br /><a href="ex01-02.html">예제2</a
-    ><br /><a href="ex01-03.html">예제3</a><br /><a href="ex01-04.html">예제4</a
-    ><br /><a href="ex01-05.html">예제5</a><br /><a href="ex01-06.html">예제6</a
-    ><br /><a href="ex01-07.html">예제7</a><br />
-    <h2>2일차</h2>
-    <a href="ex02-01.html">예제1</a><br /><a href="ex02-02.html">예제2</a
-    ><br /><a href="ex02-03.html">예제3</a><br /><a href="ex02-04.html">예제4</a
-    ><br /><a href="ex02-05.html">예제5</a><br /><a href="ex02-06.html">예제6</a
-    ><br /><a href="ex02-07.html">예제7</a><br /><a href="ex02-08.html">예제8</a
-    ><br /><a href="ex02-09.html">예제9</a><br /><a href="ex02-10.html"
-      >예제10</a
-    ><br /><a href="ex02-11.html">예제11</a><br />
-    <h2>3일차</h2>
-    <a href="ex03-01.html">예제1</a><br /><a href="ex03-02.html">예제2</a
-    ><br /><a href="ex03-03.html">예제3</a><br /><a href="ex03-04.html">예제4</a
-    ><br /><a href="ex03-05.html">예제5</a><br /><a href="ex03-06.html">예제6</a
-    ><br /><a href="ex03-07.html">예제7</a><br /><a href="ex03-08.html">예제8</a
-    ><br /><a href="ex03-09.html">예제9</a><br /><a href="ex03-10.html"
-      >예제10</a
-    ><br /><a href="ex03-11.html">예제11</a><br />
-    <a href="ex04-01.html">예제1</a><br /><a href="ex04-02.html">예제2</a
-    ><br /><a href="ex04-03.html">예제3</a><br /><a href="ex04-04.html">예제4</a
-    ><br /><a href="ex04-05.html">예제5</a><br /><a href="ex04-06.html">예제6</a
-    ><br /><a href="ex04-07.html">예제7</a><br /><a href="ex04-08.html">예제8</a
-    ><br /><a href="ex04-09.html">예제9</a><br /><a href="ex04-10.html"
-      >예제10</a
-    ><br /><a href="ex04-11.html">예제11</a><br /><a href="ex04-12.html"
-      >예제12</a
-    ><br /><a href="ex04-13.html">예제13</a><br /><a href="ex04-14.html"
-      >예제14</a
-    ><br /><a href="ex04-15.html">예제15</a><br /><a href="ex04-16.html"
-      >예제16</a
-    ><br /><a href="ex04-17.html">예제17</a><br />
+    <h1>HTML 실습</h1>
+    <div class="container">
+      <div class="day">
+        <h2>1일차</h2>
+        <div class="examples">
+          <a href="ex01-01.html">예제1</a>
+          <a href="ex01-02.html">예제2</a>
+          <a href="ex01-03.html">예제3</a>
+          <a href="ex01-04.html">예제4</a>
+          <a href="ex01-05.html">예제5</a>
+          <a href="ex01-06.html">예제6</a>
+          <a href="ex01-07.html">예제7</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>2일차</h2>
+        <div class="examples">
+          <a href="ex02-01.html">예제1</a>
+          <a href="ex02-02.html">예제2</a>
+          <a href="ex02-02a.html">예제2a</a>
+          <a href="ex02-03.html">예제3</a>
+          <a href="ex02-04.html">예제4</a>
+          <a href="ex02-05.html">예제5</a>
+          <a href="ex02-06.html">예제6</a>
+          <a href="ex02-07.html">예제7</a>
+          <a href="ex02-08.html">예제8</a>
+          <a href="ex02-09.html">예제9</a>
+          <a href="ex02-10.html">예제10</a>
+          <a href="ex02-11.html">예제11</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>3일차</h2>
+        <div class="examples">
+          <a href="ex03-01.html">예제1</a>
+          <a href="ex03-02.html">예제2</a>
+          <a href="ex03-03.html">예제3</a>
+          <a href="ex03-04.html">예제4</a>
+          <a href="ex03-05.html">예제5</a>
+          <a href="ex03-06.html">예제6</a>
+          <a href="ex03-07.html">예제7</a>
+          <a href="ex03-08.html">예제8</a>
+          <a href="ex03-09.html">예제9</a>
+          <a href="ex03-10.html">예제10</a>
+          <a href="ex03-11.html">예제11</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>4일차</h2>
+        <div class="examples">
+          <a href="ex04-01.html">예제1</a>
+          <a href="ex04-02.html">예제2</a>
+          <a href="ex04-03.html">예제3</a>
+          <a href="ex04-04.html">예제4</a>
+          <a href="ex04-05.html">예제5</a>
+          <a href="ex04-06.html">예제6</a>
+          <a href="ex04-07.html">예제7</a>
+          <a href="ex04-08.html">예제8</a>
+          <a href="ex04-09.html">예제9</a>
+          <a href="ex04-10.html">예제10</a>
+          <a href="ex04-11.html">예제11</a>
+          <a href="ex04-12.html">예제12</a>
+          <a href="ex04-13.html">예제13</a>
+          <a href="ex04-14.html">예제14</a>
+          <a href="ex04-15.html">예제15</a>
+          <a href="ex04-16.html">예제16</a>
+          <a href="ex04-17.html">예제17</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>5일차</h2>
+        <div class="examples">
+          <a href="ex05-01.html">예제1</a>
+          <a href="ex05-02.html">예제2</a>
+          <a href="ex05-03.html">예제3</a>
+          <a href="ex05-04.html">예제4</a>
+          <a href="ex05-05.html">예제5</a>
+          <a href="ex05-06.html">예제6</a>
+          <a href="ex05-07.html">예제7</a>
+          <a href="ex05-08.html">예제8</a>
+          <a href="ex05-09.html">예제9</a>
+          <a href="ex05-10.html">예제10</a>
+          <a href="ex05-11.html">예제11</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>6일차</h2>
+        <div class="examples">
+          <a href="ex06-01.html">예제1</a>
+          <a href="ex06-02.html">예제2</a>
+          <a href="ex06-03.html">예제3</a>
+          <a href="ex06-04.html">예제4</a>
+          <a href="ex06-05.html">예제5</a>
+          <a href="ex06-06.html">예제6</a>
+          <a href="ex06-07.html">예제7</a>
+          <a href="ex06-08.html">예제8</a>
+          <a href="ex06-09.html">예제9</a>
+          <a href="ex06-10.html">예제10</a>
+          <a href="ex06-11.html">예제11</a>
+          <a href="ex06-12.html">예제12</a>
+          <a href="ex06-13.html">예제13</a>
+          <a href="ex06-14.html">예제14</a>
+          <a href="ex06-15.html">예제15</a>
+          <a href="ex06-16.html">예제16</a>
+          <a href="ex06-17.html">예제17</a>
+          <a href="ex06-18.html">예제18</a>
+          <a href="ex06-19.html">예제19</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <h2>7일차</h2>
+        <div class="examples">
+          <a href="ex07-01.html">예제1</a>
+          <a href="ex07-01a.html">예제1a</a>
+          <a href="ex07-02.html">예제2</a>
+          <a href="ex07-03.html">예제3</a>
+          <a href="ex07-04.html">예제4</a>
+          <a href="ex07-05.html">예제5</a>
+        </div>
+      </div>
+    </div>
+    <!-- .container 끝 -->
   </body>
 </html>
