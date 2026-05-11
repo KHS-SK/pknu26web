@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .modals {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .modals.show {
+      display: flex;
+    }
+    .test {
+      width: 400px;
+      padding: 35px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+  <body>
+    <div class="modals show">
+      <div class="test">
+        모달이 활성화 되면 배경이 흐려지거나 비활성화되어 사용자가 모달내의
+        직업에 집중할 수 있다.
+      </div>
+      <span class="badge rounded-pill text-bg-primary">new</span>
+    </div>
+
+    <h1>간단한 뒷 배경내용들~</h1>
+    <button class="btn btn-success">로그인</button>
+    <button id="btns" class="btn btn-primary" type="button">
+      <span id="types" class="spinner-border-sm"></span>
+      <span id="names">버튼</span>
+    </button>
+    <button class="btn" type="button">
+      <span id="spinner" class="spinner-border text-info"></span>
+    </button>
+    <script>
+      const btn = document.querySelector("#btns");
+      btn.addEventListener("click", () => {
+        const types = document.querySelector("#types");
+        const names = document.querySelector("#names");
+        types.classList.toggle("spinner-border");
+        if (types.clasList.contains("spinner-border")) {
+          names.textContent = "Loading...";
+        } else {
+          names.textContent = "Loading...";
+        }
+      });
+      const spinner = document.querySelector("#spinner");
+      const stopSpinner = () => spinner.classList.remove("spinner-border");
+      setTimeout(stopSpinner, 2000);
+    </script>
+
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat
+      fugiat debitis recusandae labore nostrum ab, sunt culpa! Magni corporis
+      sunt illo officiis quaerat sed maiores! Exercitationem quisquam soluta
+      dolorem voluptas ex aliquam asperiores accusantium doloremque est vel
+      eaque atque rem odio, deserunt, voluptates cum nemo ab itaque quis?
+      Dolorem ad iure facere explicabo sint natus quidem fuga voluptates,
+      consequatur ipsa quibusdam incidunt error quod sed tempore porro ut quasi
+      harum voluptatibus. Praesentium cumque dolore eos tenetur. Praesentium
+      libero, dicta obcaecati ipsum accusamus amet hic ipsam dolore aspernatur
+      neque, unde quidem odit vitae sit quibusdam. Quisquam soluta qui ipsa
+      amet.
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quia minus
+      in quod aspernatur, excepturi cum perferendis incidunt delectus quaerat
+      est nesciunt, voluptatum, eius magnam aliquam qui rerum ipsam velit porro
+      quisquam id placeat quam. Autem assumenda odio iste consequuntur,
+      consequatur magni error aliquid labore! Earum, ab sed ea recusandae error
+      veritatis enim iure! Totam itaque animi beatae a. Perferendis, commodi
+      nemo! Veniam laudantium consequatur nesciunt ipsam dicta molestiae libero,
+      nam laborum perferendis, modi impedit accusamus sapiente sunt. Unde, quam
+      aliquid? Eaque mollitia quod ratione nulla tempora at quidem perferendis!
+      Modi magnam at assumenda neque! Qui reprehenderit rem dicta. Aliquam!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quia minus
+      in quod aspernatur, excepturi cum perferendis incidunt delectus quaerat
+      est nesciunt, voluptatum, eius magnam aliquam qui rerum ipsam velit porro
+      quisquam id placeat quam. Autem assumenda odio iste consequuntur,
+      consequatur magni error aliquid labore! Earum, ab sed ea recusandae error
+      veritatis enim iure! Totam itaque animi beatae a. Perferendis, commodi
+      nemo! Veniam laudantium consequatur nesciunt ipsam dicta molestiae libero,
+      nam laborum perferendis, modi impedit accusamus sapiente sunt. Unde, quam
+      aliquid? Eaque mollitia quod ratione nulla tempora at quidem perferendis!
+      Modi magnam at assumenda neque! Qui reprehenderit rem dicta. Aliquam!
+    </p>
+    <h3>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi
+      praesentium autem culpa debitis nostrum rerum! Laborum laboriosam nulla et
+      iste pariatur quam tempora. Similique repellendus, quia nulla eveniet quae
+      adipisci cumque et ullam fugit laudantium debitis numquam cum quos error
+      voluptatem reprehenderit deleniti tenetur non ipsum, quaerat culpa dolorem
+      accusamus modi odio. Dolor, eaque itaque ea odit maiores quae provident
+      voluptatibus a voluptate expedita aperiam saepe? Soluta illo id minima
+      voluptas. Cupiditate voluptate in voluptatibus iusto omnis. Beatae, animi
+      amet. Magni exercitationem labore sequi tenetur corporis culpa nemo
+      officiis asperiores dicta officia provident illum deleniti nobis vitae,
+      laborum veritatis.
+    </h3>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

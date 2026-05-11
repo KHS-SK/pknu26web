@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주사위 확률 시뮬레이터</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      #box {
+        background: rgb(235, 216, 191);
+        width: 400px;
+        height: 300px;
+        margin: 10% auto;
+        padding: 40px 10px 40px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.445);
+      }
+      #box > div {
+        height: 30px;
+        margin: 5px;
+        background-color: rgb(42, 154, 206);
+        box-shadow: 10px 10px 20px rgba(86, 84, 97, 0.445);
+        border-radius: 0 15px 15px 0;
+      }
+      table {
+        max-width: 600px;
+        margin: auto;
+      }
+      tr,
+      th,
+      td {
+        background-color: rgb(203, 166, 236);
+        color: white;
+        box-shadow: 10px 10px 20px rgba(50, 50, 50, 0.5);
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+      }
+      span {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        display: block;
+        text-align: right;
+        line-height: 1.7rem;
+        margin: 0 10px;
+        text-shadow: 5px 5px 20px black;
+      }
+      button {
+        background-color: rgb(200, 109, 241);
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const trials = 100000; // 횟수
+
+      counts = [0, 0, 0, 0, 0, 0];
+
+      for (let i = 0; i < trials; i++) {
+        const face = Math.floor(Math.random() * 6) + 1;
+        let list = "";
+        counts[face - 1]++;
+      }
+
+      for (let j = 0; j < counts.length; j++) {
+        const prob = counts[j] / trials;
+        const percent = (prob * 100).toFixed(3);
+        console.log(`${j + 1}: ${counts[j]}번 (${percent}%)`);
+      }
+
+      const counts0 = ((counts[0] / trials) * 100).toFixed(3);
+      const counts1 = ((counts[1] / trials) * 100).toFixed(3);
+      const counts2 = ((counts[2] / trials) * 100).toFixed(3);
+      const counts3 = ((counts[3] / trials) * 100).toFixed(3);
+      const counts4 = ((counts[4] / trials) * 100).toFixed(3);
+      const counts5 = ((counts[5] / trials) * 100).toFixed(3);
+
+      list = `<h2>${trials}회 주사위 굴리기 시뮬레이션</h2><table>
+      <tr>
+        <th>면</th>
+        <th>기본확률</th>
+        <th>횟수</th>
+        <th>확률</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>16.67%</td>
+        <td>${counts[0]}</td>
+        <td>${counts0}%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>16.67%</td>
+        <td>${counts[1]}</td>
+        <td>${counts1}%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>16.67%</td>
+        <td>${counts[2]}</td>
+        <td>${counts2}%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>16.67%</td>
+        <td>${counts[3]}</td>
+        <td>${counts3}%</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>16.67%</td>
+        <td>${counts[4]}</td>
+        <td>${counts4}%</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>16.67%</td>
+        <td>${counts[5]}</td>
+        <td>${counts5}%</td>
+      </tr>
+    </table>`;
+      list += `<div id="box">
+      <div style ="width: ${counts0}%"><span>1면 <small>(${counts0}%)</small></span></div>
+      <div style ="width: ${counts1}%"><span>2면 <small>(${counts1}%)</small></span></div>
+      <div style ="width: ${counts2}%"><span>3면 <small>(${counts2}%)</small></span></div>
+      <div style ="width: ${counts3}%"><span>4면 <small>(${counts3}%)</small></span></div>
+      <div style ="width: ${counts4}%"><span>5면 <small>(${counts4}%)</small></span></div>
+      <div style ="width: ${counts5}%"><span>6면 <small>(${counts5}%)</small></span></div>
+    <button onclick="location.reload(true)">새로고침</button>`;
+      document.body.innerHTML = list;
+    </script>
+  </body>
+</html>

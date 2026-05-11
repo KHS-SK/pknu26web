@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      #box {
+        background: rgb(235, 216, 191);
+        width: 400px;
+        height: 300px;
+        margin: 10% auto;
+        padding: 40px 10px 40px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.445);
+      }
+      #box > div {
+        height: 30px;
+        margin: 5px;
+        background-color: rgb(42, 154, 206);
+        box-shadow: 10px 10px 20px rgba(86, 84, 97, 0.445);
+        border-radius: 0 15px 15px 0;
+      }
+
+      table {
+        width: 400px;
+        margin: 100px auto;
+      }
+      tr,
+      th,
+      td {
+        background-color: rgb(14, 104, 107);
+        color: white;
+        box-shadow: 10px 10px 20px rgba(50, 50, 50, 0.5);
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+      }
+      span {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        display: block;
+        text-align: right;
+        line-height: 1.7rem;
+        margin: 0 10px;
+        text-shadow: 5px 5px 20px black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const epoch = 100000; // 횟수
+      let turn = 0; // while에 사용하는 증가값
+      const count = [0, 0, 0, 0]; // new Array(4)
+      let verf = "검증 중";
+
+      while (turn < epoch) {
+        const ran = Math.floor(Math.random() * 100);
+        let list = "";
+        if (ran < 3) {
+          count[0]++;
+        } else if (ran < 13) {
+          count[1]++;
+        } else if (ran < 43) {
+          count[2]++;
+        } else {
+          count[3]++;
+        }
+        turn++;
+      }
+
+      if (epoch == count[0] + count[1] + count[2] + count[3]) {
+        verf = "검증완료";
+      } else {
+        verf = "검증이상";
+        alert("검증이상");
+      }
+
+      const count0 = ((count[0] / epoch) * 100).toFixed(1);
+      const count1 = ((count[1] / epoch) * 100).toFixed(1);
+      const count2 = ((count[2] / epoch) * 100).toFixed(1);
+      const count3 = ((count[3] / epoch) * 100).toFixed(1);
+
+      list = `<h2>${epoch}회 (${verf})</h2><table>
+      <tr>
+        <th>아이템</th>
+        <th>기본확률</th>
+        <th>개수</th>
+        <th>검증</th>
+      </tr>
+      <tr>
+        <td>유니크</td>
+        <td>3%</td>
+        <td>${count[0]}</td>
+        <td>${count0}%</td>
+      </tr>
+      <tr>
+        <td>레어</td>
+        <td>10%</td>
+        <td>${count[1]}</td>
+        <td>${count1}%</td>
+      </tr>
+      <tr>
+        <td>매직</td>
+        <td>30%</td>
+        <td>${count[2]}</td>
+        <td>${count2}%</td>
+      </tr>
+      <tr>
+        <td>일반</td>
+        <td>57%</td>
+        <td>${count[3]}</td>
+        <td>${count3}%</td>
+      </tr>
+    </table>`;
+      list += `<div id="box">
+      <div style="width: ${count0 * 1.5}%"><span>유니크 <small>(${count0}%)</small></span></div>
+      <div style="width: ${count1 * 1.5}%"><span>레어 <small>(${count1}%)</small></span></div>
+      <div style="width: ${count2 * 1.5}%"><span>매직 <small>(${count2}%)</small></span></div>
+      <div style="width: ${count3 * 1.5}%"><span>일반 <small>(${count3}%)</small></span></div>
+    </div>
+    <button onclick="location.reload(true)">새로고침</button>`;
+      document.body.innerHTML = list;
+    </script>
+  </body>
+</html>

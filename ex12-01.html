@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let ct = 0;
+        const h1 = document.createElement("h1");
+        document.body.append(h1);
+        h1.textContent = `클릭 횟수: 0`;
+        h1.style.userSelect = "none"; // 웹사이트에서 드래그를 금지(none)하는 커맨드
+        h1.addEventListener("contextmenu", (e) => {
+          e.preventDefault(); // 우클릭 방지
+        });
+        h1.addEventListener("click", () => {
+          h1.textContent = `클릭 횟수: ${++ct}`;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
